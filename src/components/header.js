@@ -20,8 +20,12 @@ const Header = ({ siteTitle }) => (
     <NavbarMenu>
       <NavbarStart></NavbarStart>
       <NavbarEnd>
-        <NavbarItem href="/">Home</NavbarItem>
-        <NavbarItem href="/resume/">Resume</NavbarItem>
+        <Link to="/" className="navbar-item">
+          Home
+        </Link>
+        <Link to="/resume/" className="navbar-item">
+          Resume
+        </Link>
       </NavbarEnd>
     </NavbarMenu>
   </Navbar>
