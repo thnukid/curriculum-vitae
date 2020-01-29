@@ -1,0 +1,272 @@
+{
+  "basics": {
+    "name": "Eric Bartholemy",
+    "label": "Software Engineer",
+    "image": "",
+    "email": "richard.hendriks@mail.com",
+    "phone": "(912) 555-4321",
+    "url": "http://richardhendricks.example.com",
+    "summary": "Eric has been developing web-applications since 2005 and has gained experiences in the field before and during his Bachelor Degree through several freelance projects.",
+    "location": {
+      "city": "Aachen",
+      "countryCode": "DE",
+      "region": "NRW"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "thnukid",
+        "url": "https://github.com/thnukid"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "bartholemy",
+        "url": "https://www.linkedin.com/in/bartholemy/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Kabisa",
+      "location": "Weert, Netherlands",
+      "description": "Kabisa’s speciality is the development and management of business-critical web applications, both desktop and mobile.",
+      "position": "Software Engineer",
+      "url": "https://www.kabisa.nl/",
+      "startDate": "2016-04-01",
+      "summary": "Kabisa's speciality is the development and management of business-critical web applications, both desktop and mobile.",
+      "highlights": []
+    },
+    {
+      "name": "Talentee",
+      "location": "Eindhoven, Netherlands",
+      "description": "Awesome compression company",
+      "position": "Software Engineer",
+      "url": "https://www.talentee.nl/",
+      "startDate": "2015-04-01",
+      "endDate": "2016-05-01",
+      "summary": "Talentee ontwikkelt IT-oplossingen voor de arbeidsmarkt.",
+      "highlights": []
+    },
+    {
+      "name": "Kabisa",
+      "location": "Weert, Netherlands",
+      "description": "Kabisa’s speciality is the development and management of business-critical web applications, both desktop and mobile.",
+      "position": "Graduation Internship",
+      "url": "https://kabisa.nl",
+      "startDate": "2014-09-01",
+      "endDate": "2015-01-01",
+      "summary": "Gamification Toolkit",
+      "highlights": []
+    }
+  ],
+  "projects": [
+    {
+      "company": "Philips Research",
+      "industry": "Health Care",
+      "highlights": [],
+      "keywords": ["Ruby On Rails"],
+      "startDate": "2016-04-01",
+      "endDate": "2016-05-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Twin Archer  Webshop 1.0",
+      "industry": "E-Commerce",
+      "highlights": [],
+      "keywords": ["Ruby On Rails"],
+      "startDate": "2016-05-01",
+      "endDate": "2016-07-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Softbrick Dashboard",
+      "industry": "Workforce Management",
+      "highlights": [],
+      "keywords": ["Javascript", "SenchaJs"],
+      "startDate": "2016-07-01",
+      "endDate": "2016-08-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "MXII Bluetooth Mobile App Control Panel",
+      "industry": "Labatory Equipment",
+      "highlights": [],
+      "keywords": ["Javascript", "Cordova", "Bluetooth", "MAJII Mobile Framework"],
+      "startDate": "2016-08-01",
+      "endDate": "2016-10-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Brick Parking Enforcement",
+      "industry": "Law Enforcement",
+      "highlights": [],
+      "keywords": ["Ruby on Rails", "AngularJs"],
+      "startDate": "2016-08-01",
+      "endDate": "2016-10-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "ASML",
+      "industry": "Semiconductor, Lithography",
+      "highlights": [],
+      "keywords": ["Ruby on Rails"],
+      "startDate": "2017-01-01",
+      "endDate": "2019-01-02",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Fatboy",
+      "industry": "E-Commerce",
+      "highlights": [],
+      "keywords": ["Ruby on Rails"],
+      "startDate": "2019-02-01",
+      "endDate": "2019-04-04",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Signify - HUE Point Of Sale",
+      "industry": "Retail, USA",
+      "highlights": [],
+      "keywords": ["AngularJs", "TypeScript", "Sockets.io", "HUE Bridge"],
+      "startDate": "2019-03-01",
+      "endDate": "2019-06-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Signify - Indoor Positioning System",
+      "industry": "Retail, Indoor Navigation",
+      "highlights": [],
+      "keywords": ["Javascript", "ReactJs", "Python"],
+      "startDate": "2019-06-01",
+      "endDate": "2020-01-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    }
+  ],
+  "certificate": [
+    {
+      "code": "1Z0-062",
+      "name": "XYZ Certified Application Specialist (MCAS)",
+      "website": "http://www.example.org",
+      "verification": "http://www.example.org",
+      "grantDate": "2017-06-29",
+      "endDate": "2017-06-29",
+      "doesNotExpire": true
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Stichting CodeUur",
+      "position": "Mentor",
+      "url": "https://www.linkedin.com/company/stichtingfuturenl/",
+      "startDate": "2016-10-01",
+      "endDate": "2016-10-02",
+      "summary": "Giving a programming lesson to kids of group 7 and 8 at a basis school in the Netherlands. Meanwhile 11.368 kids received a programming lesson around the netherlands, which is a new world record.",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Oklahoma",
+      "area": "Information Technology",
+      "studyType": "Bachelor",
+      "startDate": "2011-06-01",
+      "endDate": "2014-01-01",
+      "gpa": "4.0",
+      "courses": [
+        "DB1101 - Basic SQL",
+        "CS2011 - Java Introduction"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ]
+    },
+    {
+      "name": "Compression",
+      "level": "Master",
+      "keywords": [
+        "Mpeg",
+        "MP4",
+        "GIF"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Erlich Bachman",
+      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}
