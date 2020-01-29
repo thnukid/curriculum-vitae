@@ -76,75 +76,81 @@ const ResumeMediaObject = ({
 }
 
 const workExperiences = resumeData => {
-  return resumeData.work.map((workPlace, index) => {
-    return (
-      <ResumeMediaObject
-        title={workPlace.position}
-        subTitle={workPlace.name}
-        href={workPlace.url}
-        ariaLabel={workPlace.name}
-        startDate={workPlace.startDate}
-        endDate={workPlace.endDate}
-        summary={workPlace.summary}
-      >
-        <ListHighlights highlights={workPlace.highlights} />
-      </ResumeMediaObject>
-    )
-  })
+  return resumeData.work
+    .sort((a, b) => new Date(b.startDate) - new Date(a.startDate))
+    .map((workPlace, index) => {
+      return (
+        <ResumeMediaObject
+          title={workPlace.position}
+          subTitle={workPlace.name}
+          href={workPlace.url}
+          ariaLabel={workPlace.name}
+          startDate={workPlace.startDate}
+          endDate={workPlace.endDate}
+          summary={workPlace.summary}
+        >
+          <ListHighlights highlights={workPlace.highlights} />
+        </ResumeMediaObject>
+      )
+    })
 }
 
 const voluenteering = resumeData => {
-  return resumeData.volunteer.map((volunteered, index) => {
-    return (
-      <ResumeMediaObject
-        title={volunteered.position}
-        subTitle={volunteered.organization}
-        href={volunteered.url}
-        ariaLabel={volunteered.name}
-        startDate={volunteered.startDate}
-        endDate={volunteered.endDate}
-        summary={volunteered.summary}
-        highlights={volunteered.highlights}
-      >
-        <ListHighlights highlights={volunteered.highlights} />
-      </ResumeMediaObject>
-    )
-  })
+  return resumeData.volunteer
+    .sort((a, b) => new Date(b.startDate) - new Date(a.startDate))
+    .map((volunteered, index) => {
+      return (
+        <ResumeMediaObject
+          title={volunteered.position}
+          subTitle={volunteered.organization}
+          href={volunteered.url}
+          ariaLabel={volunteered.name}
+          startDate={volunteered.startDate}
+          endDate={volunteered.endDate}
+          summary={volunteered.summary}
+          highlights={volunteered.highlights}
+        >
+          <ListHighlights highlights={volunteered.highlights} />
+        </ResumeMediaObject>
+      )
+    })
 }
 
 const projects = resumeData => {
-  return resumeData.projects.map((project, index) => {
-    return (
-      <Media>
-        <MediaLeft>
-          <Image isSize="64x64" src="https://via.placeholder.com/128x128" />
-        </MediaLeft>
-        <MediaContent>
-          <Content>
-            <a href={project.url} aria-label={project.name}>
-              {project.company}
-            </a>
-            {" / "}
-            <b>{project.industry}</b>
-            <br />
-            <small>
-              <Moment format="MMM YYYY" parse="YYYY-MM-DD" interval={0}>
-                {project.startDate}
-              </Moment>
-              {" - "}
-              <Moment format="MMM YYYY" parse="YYYY-MM-DD" interval={0}>
-                {project.endDate}
-              </Moment>
-            </small>
-            <br />
-            <ListTags tags={project.roles} isColor="light" />
-            <ListTags tags={project.keywords} isColor="primary" />
-            <p>{project.summary}</p>
-          </Content>
-        </MediaContent>
-      </Media>
-    )
-  })
+  return resumeData.projects
+    .sort((a, b) => new Date(b.startDate) - new Date(a.startDate))
+    .map((project, index) => {
+      return (
+        <Media>
+          <MediaLeft>
+            <Image isSize="64x64" src="https://via.placeholder.com/128x128" />
+          </MediaLeft>
+          <MediaContent>
+            <Content>
+              <a href={project.url} aria-label={project.name}>
+                {project.company}
+              </a>
+              {" / "}
+              <b>{project.industry}</b>
+              <br />
+              <small>
+                <Moment format="MMM YYYY" parse="YYYY-MM-DD" interval={0}>
+                  {project.startDate}
+                </Moment>
+                {" - "}
+                <Moment format="MMM YYYY" parse="YYYY-MM-DD" interval={0}>
+                  {project.endDate}
+                </Moment>
+              </small>
+              <br />
+              <ListTags tags={project.roles} isColor="light" />
+              <ListTags tags={project.keywords} isColor="primary" />
+              <p>{project.summary}</p>
+            </Content>
+          </MediaContent>
+        </Media>
+      )
+    })
 }
 
 const educations = resumeData => {
