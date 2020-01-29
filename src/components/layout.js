@@ -28,11 +28,11 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Container>
-          <Header siteTitle={'Bloomer'} />
+        <Container isFluid={true}>
+          <Header siteTitle={data.site.siteMetadata.title} />
         </Container>
-        <Container>{children}</Container>
-        <Container>
+        <Container isFluid={true}>{children}</Container>
+        <Container isFluid={true}>
           <Footer siteTitle={data.site.siteMetadata.title} />
         </Container>
       </>

@@ -4,24 +4,14 @@ import React from "react"
 
 const FooterNav = ({ siteTitle }) => (
   <Footer id="footer">
-    <Container hasTextAlign='center'>
-      <Content>
-        <Columns>
-          <Column isFull>
-            <p>
-              © {new Date().getFullYear()}, Built with
-              {` `}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </p>
-          </Column>
-        </Columns>
-        <Content isSize="small">
-          <p>
-            The source code is licensed under MIT.
-          </p>
-        </Content>
-      </Content>
-    </Container>
+    <Content isSize="small" hasTextAlign='centered'>
+      <p>
+        © 2015 - {new Date().getFullYear()}
+        {` `} {siteTitle}
+        <br/>
+        All rights reserved.
+      </p>
+    </Content>
   </Footer>
 )
 

@@ -15,26 +15,14 @@ const Header = ({ siteTitle }) => (
   <Navbar>
     <NavbarBrand>
       <NavbarItem>{siteTitle}</NavbarItem>
-      <NavbarItem isHidden="desktop">
-        <Link to="/page-2/">Page 2</Link>
-      </NavbarItem>
-      <NavbarItem isHidden="desktop">
-        <Link to="/page-2/">Page 2</Link>
-      </NavbarItem>
       <NavbarBurger />
     </NavbarBrand>
     <NavbarMenu>
       <NavbarStart>
-        <NavbarItem href="/">Index</NavbarItem>
-        <NavbarItem href="/page-2/">Page 2</NavbarItem>
       </NavbarStart>
       <NavbarEnd>
-        <NavbarItem
-          href="https://github.com/thnukid/gatsby-starter-netlify-pwa"
-          isHidden="touch"
-        >
-          On Github
-        </NavbarItem>
+        <NavbarItem href="/">Home</NavbarItem>
+        <NavbarItem href="/resume/">Resume</NavbarItem>
       </NavbarEnd>
     </NavbarMenu>
   </Navbar>
