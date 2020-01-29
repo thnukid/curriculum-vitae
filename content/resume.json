@@ -27,70 +27,163 @@
   },
   "work": [
     {
-      "name": "Pied Piper",
-      "location": "Palo Alto, CA",
-      "description": "Awesome compression company",
-      "position": "CEO/President",
-      "url": "http://piedpiper.example.com",
-      "startDate": "2013-12-01",
-      "endDate": "2014-12-01",
-      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression al<gorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
-      "highlights": [
-        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
-        "Successfully won Techcrunch Disrupt",
-        "Optimized an algorithm that holds the current world record for Weisman Scores"
-      ]
+      "name": "Kabisa",
+      "location": "Weert, Netherlands",
+      "description": "Kabisa’s speciality is the development and management of business-critical web applications, both desktop and mobile.",
+      "position": "Software Engineer",
+      "url": "https://www.kabisa.nl/",
+      "startDate": "2016-04-01",
+      "summary": "Kabisa's speciality is the development and management of business-critical web applications, both desktop and mobile.",
+      "highlights": []
     },
     {
-      "name": "Pied Piper",
-      "location": "Palo Alto, CA",
+      "name": "Talentee",
+      "location": "Eindhoven, Netherlands",
       "description": "Awesome compression company",
-      "position": "CEO/President",
-      "url": "http://piedpiper.example.com",
-      "startDate": "2013-12-01",
-      "endDate": "2014-12-01",
-      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression al<gorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
-      "highlights": [
-        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
-        "Successfully won Techcrunch Disrupt",
-        "Optimized an algorithm that holds the current world record for Weisman Scores"
-      ]
+      "position": "Software Engineer",
+      "url": "https://www.talentee.nl/",
+      "startDate": "2015-04-01",
+      "endDate": "2016-05-01",
+      "summary": "Talentee ontwikkelt IT-oplossingen voor de arbeidsmarkt.",
+      "highlights": []
     },
     {
-      "name": "Pied Piper",
-      "location": "Palo Alto, CA",
-      "description": "Awesome compression company",
-      "position": "CEO/President",
-      "url": "http://piedpiper.example.com",
-      "startDate": "2013-12-01",
-      "endDate": "2014-12-01",
-      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression al<gorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
-      "highlights": [
-        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
-        "Successfully won Techcrunch Disrupt",
-        "Optimized an algorithm that holds the current world record for Weisman Scores"
-      ]
+      "name": "Kabisa",
+      "location": "Weert, Netherlands",
+      "description": "Kabisa’s speciality is the development and management of business-critical web applications, both desktop and mobile.",
+      "position": "Graduation Internship",
+      "url": "https://kabisa.nl",
+      "startDate": "2014-09-01",
+      "endDate": "2015-01-01",
+      "summary": "Gamification Toolkit",
+      "highlights": []
     }
   ],
   "projects": [
     {
-      "name": "Miss Direction",
-      "description": "A mapping engine that misguides you",
-      "highlights": [
-        "Won award at AIHacks 2016",
-        "Built by all women team of newbie programmers",
-        "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
-      ],
-      "keywords": [
-        "GoogleMaps", "Chrome Extension", "Javascript"
-      ],
-      "startDate": "2016-08-24",
-      "endDate": "2016-08-24",
-      "url": "missdirection.example.com",
+      "company": "Philips Research",
+      "industry": "Health Care",
+      "highlights": [],
+      "keywords": ["Ruby On Rails"],
+      "startDate": "2016-04-01",
+      "endDate": "2016-05-01",
+      "url": "#",
       "roles": [
-        "Team lead", "Designer"
+        "Software Engineer"
       ],
-      "entity": "Smoogle",
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Twin Archer  Webshop 1.0",
+      "industry": "E-Commerce",
+      "highlights": [],
+      "keywords": ["Ruby On Rails"],
+      "startDate": "2016-05-01",
+      "endDate": "2016-07-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Softbrick Dashboard",
+      "industry": "Workforce Management",
+      "highlights": [],
+      "keywords": ["Javascript", "SenchaJs"],
+      "startDate": "2016-07-01",
+      "endDate": "2016-08-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "MXII Bluetooth Mobile App Control Panel",
+      "industry": "Labatory Equipment",
+      "highlights": [],
+      "keywords": ["Javascript", "Cordova", "Bluetooth", "MAJII Mobile Framework"],
+      "startDate": "2016-08-01",
+      "endDate": "2016-10-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Brick Parking Enforcement",
+      "industry": "Law Enforcement",
+      "highlights": [],
+      "keywords": ["Ruby on Rails", "AngularJs"],
+      "startDate": "2016-08-01",
+      "endDate": "2016-10-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "ASML",
+      "industry": "Semiconductor, Lithography",
+      "highlights": [],
+      "keywords": ["Ruby on Rails"],
+      "startDate": "2017-01-01",
+      "endDate": "2019-01-02",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Fatboy",
+      "industry": "E-Commerce",
+      "highlights": [],
+      "keywords": ["Ruby on Rails"],
+      "startDate": "2019-02-01",
+      "endDate": "2019-04-04",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Signify - HUE Point Of Sale",
+      "industry": "Retail, USA",
+      "highlights": [],
+      "keywords": ["AngularJs", "TypeScript", "Sockets.io", "HUE Bridge"],
+      "startDate": "2019-03-01",
+      "endDate": "2019-06-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
+      "type": "application"
+    },
+    {
+      "company": "Signify - Indoor Positioning System",
+      "industry": "Retail, Indoor Navigation",
+      "highlights": [],
+      "keywords": ["Javascript", "ReactJs", "Python"],
+      "startDate": "2019-06-01",
+      "endDate": "2020-01-01",
+      "url": "#",
+      "roles": [
+        "Software Engineer"
+      ],
+      "entity": "Kabisa",
       "type": "application"
     }
   ],
@@ -107,15 +200,13 @@
   ],
   "volunteer": [
     {
-      "organization": "CoderDojo",
-      "position": "Teacher",
-      "url": "http://coderdojo.example.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Global movement of free coding clubs for young people.",
-      "highlights": [
-        "Awarded 'Teacher of the Month'"
-      ]
+      "organization": "Stichting CodeUur",
+      "position": "Mentor",
+      "url": "https://www.linkedin.com/company/stichtingfuturenl/",
+      "startDate": "2016-10-01",
+      "endDate": "2016-10-01",
+      "summary": "Giving a programming lesson to kids of group 7 and 8 at a basis school in the Netherlands. Meanwhile 11.368 kids received a programming lesson around the netherlands, which is a new world record.",
+      "highlights": []
     }
   ],
   "education": [
