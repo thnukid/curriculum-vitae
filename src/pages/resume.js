@@ -2,6 +2,12 @@ import React from "react"
 import Moment from "react-moment"
 import resumeData from "../../content/resume.json"
 import {
+  HeroFooter,
+  Tabs,
+  TabsList,
+  TabList,
+  Tab,
+  TabLink,
   Title,
   Container,
   Hero,
@@ -261,6 +267,20 @@ const HeroTitel = ({ title, subTitle, children }) => {
           {children}
         </Container>
       </HeroBody>
+      <HeroFooter>
+        <Tabs isBoxed isFullWidth>
+            <Container isFluid>
+                <TabList>
+                    <Tab><TabLink href='#experience'>Work Experience</TabLink></Tab>
+                    <Tab><TabLink href='#volunteer'>Volunteer</TabLink></Tab>
+                    <Tab><TabLink href='#projects'>Projects</TabLink></Tab>
+                    <Tab><TabLink href='#education'>Education</TabLink></Tab>
+                    <Tab><TabLink href='#certificates'>Certificates</TabLink></Tab>
+                    <Tab><TabLink href='#skills'>Skills</TabLink></Tab>
+                </TabList>
+            </Container>
+        </Tabs>
+      </HeroFooter>
     </Hero>
   )
 }
@@ -268,23 +288,29 @@ const resume = () => (
   <Layout>
     <SEO title="Resume" />
     {basics(resumeData)}
+    <Container isFluid>
     <Content>
-      <h3>Work Experience</h3>
+      <a name="experience"/>
+      <h3> Work Experience</h3>
       {workExperiences(resumeData)}
     </Content>
     <Content>
+      <a name="volunteer"/>
       <h3>Volunteer</h3>
       {voluenteering(resumeData)}
     </Content>
     <Content>
+      <a name="projects"/>
       <h3>Projects</h3>
       {projects(resumeData)}
     </Content>
     <Content>
+      <a name="education"/>
       <h3>Education</h3>
       {educations(resumeData)}
     </Content>
     <Content>
+      <a name="certifcates"/>
       <h3>Certificates</h3>
       {certificates(resumeData)}
     </Content>
@@ -292,6 +318,7 @@ const resume = () => (
       <h3>Skills</h3>
       {skills(resumeData)}
     </Content>
+        </Container>
   </Layout>
 )
 export default resume
