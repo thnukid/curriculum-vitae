@@ -1,12 +1,10 @@
 @charset "utf-8";
-@import "~bulma";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-html {
-  font-family: Merriweather,Georgia,serif;
-  font-size: 1.6em;
-  font-weight: 300;
-  line-height: 1.8em;
-}
+$family-sans-serif: "Roboto", Georgia, serif;
+$body-line-height: 1.8em;
+
+@import "~bulma";
 
 .hero-body {
   .gatsby-image-wrapper {
