@@ -1,8 +1,22 @@
 import React from "react"
 import Moment from "react-moment"
 import resumeData from "../../content/resume.json"
+import {
+  Title,
+  Container,
+  Hero,
+  HeroBody,
+  Tag,
+  Content,
+  Media,
+  MediaLeft,
+  MediaContent,
+  Image,
+} from "bloomer"
+
+import ProfileImage from "../components/image"
 import Layout from "../components/layout"
-import { Tag, Content, Media, MediaLeft, MediaContent, Image } from "bloomer"
+import SEO from "../components/seo"
 
 const ListTags = ({ tags, isColor }) => {
   return tags.map((tag, index) => {
@@ -205,43 +219,55 @@ const skills = resumeData => {
 const basics = resumeData => {
   return (
     <>
-      <h1>{resumeData.basics.name}</h1>
-      <h4>{resumeData.basics.label}</h4>
-      {resumeData.basics.location.city} (
-      {resumeData.basics.location.countryCode},{" "}
-      {resumeData.basics.location.region})
-      <Content>
-        <p>{resumeData.basics.summary}</p>
-      </Content>
+      <HeroTitel
+        title={resumeData.basics.name}
+        subTitle={resumeData.basics.label}
+      >
+        {profiles(resumeData)}
+      </HeroTitel>
     </>
   )
 }
 
 const profiles = resumeData => {
+  return resumeData.basics.profiles.map((profile, index) => {
+    return (
+      <>
+        <a
+          key={[profile.network, index].join("-")}
+          href={profile.url}
+          aria-label={profile.network}
+        >
+          <Tag isColor="primary" isSize="medium">
+            {profile.network}
+          </Tag>
+        </a>{" "}
+      </>
+    )
+  })
+}
+const HeroTitel = ({ title, subTitle, children }) => {
   return (
-    <ul>
-      {resumeData.basics.profiles.map((profile, index) => {
-        return (
-          <li key={[profile.network, index].join("-")}>
-            <a href={profile.url} aria-label={profile.network}>
-              {profile.username}
-            </a>
-          </li>
-        )
-      })}
-    </ul>
+    <Hero isColor="light">
+      <HeroBody>
+        <Container hasTextAlign="centered">
+          <ProfileImage />
+          <Title tag="h1" isSize={1}>
+            {title}
+          </Title>
+          <Title tag="h4" isSize={4}>
+            {subTitle}
+          </Title>
+          {children}
+        </Container>
+      </HeroBody>
+    </Hero>
   )
 }
 const resume = () => (
   <Layout>
-    <Content>
-      <h3>Basics</h3>
-      {basics(resumeData)}
-    </Content>
-    <Content>
-      <h3>Profiles</h3>
-      {profiles(resumeData)}
-    </Content>
+    <SEO title="Resume" />
+    {basics(resumeData)}
     <Content>
       <h3>Work Experience</h3>
       {workExperiences(resumeData)}

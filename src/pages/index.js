@@ -19,7 +19,7 @@ import {
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Hero isColor="light" isHalfHeight={true}>
+    <Hero isColor="light">
       <HeroBody>
         <Container hasTextAlign="centered">
           <Image />
