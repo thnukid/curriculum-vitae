@@ -18,8 +18,7 @@ const Header = ({ siteTitle }) => (
       <NavbarBurger />
     </NavbarBrand>
     <NavbarMenu>
-      <NavbarStart>
-      </NavbarStart>
+      <NavbarStart></NavbarStart>
       <NavbarEnd>
         <NavbarItem href="/">Home</NavbarItem>
         <NavbarItem href="/resume/">Resume</NavbarItem>
