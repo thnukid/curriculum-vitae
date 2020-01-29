@@ -1,19 +1,20 @@
 import React from "react"
+import Moment from "react-moment"
 import resumeData from "../../content/resume.json"
 import Layout from "../components/layout"
 import { Tag, Content, Media, MediaLeft, MediaContent, Image } from "bloomer"
 
-const ListTags = tags => {
+const ListTags = ({ tags, isColor }) => {
   return tags.map((tag, index) => {
     return (
       <>
-        <Tag>{tag}</Tag>{" "}
+        <Tag isColor={isColor}>{tag}</Tag>{" "}
       </>
     )
   })
 }
 
-const ListHighlights = highlights => {
+const ListHighlights = ({ highlights }) => {
   return (
     <ul>
       {highlights.map((highlight, index) => {
@@ -48,7 +49,23 @@ const ResumeMediaObject = ({
           </a>
           <br />
           <small>
-            {startDate} - {endDate}
+            <Moment format="MMM YYYY" parse="YYYY-MM-DD" interval={0}>
+              {startDate}
+            </Moment>
+            {" - "}
+            {endDate ? (
+              <Moment format="MMM YYYY" parse="YYYY-MM-DD" interval={0}>
+                {endDate}
+              </Moment>
+            ) : (
+              "present"
+            )}{" "}
+            &middot;{" "}
+            {endDate ? (
+              <Moment duration={startDate} date={endDate} />
+            ) : (
+              <Moment duration={startDate} date={Date.now()} />
+            )}
           </small>
           <p>{summary}</p>
           {children}
@@ -70,7 +87,7 @@ const workExperiences = resumeData => {
         endDate={workPlace.endDate}
         summary={workPlace.summary}
       >
-        {ListHighlights(workPlace.highlights)}
+        <ListHighlights highlights={workPlace.highlights} />
       </ResumeMediaObject>
     )
   })
@@ -89,7 +106,7 @@ const voluenteering = resumeData => {
         summary={volunteered.summary}
         highlights={volunteered.highlights}
       >
-        {ListHighlights(volunteered.highlights)}
+        <ListHighlights highlights={volunteered.highlights} />
       </ResumeMediaObject>
     )
   })
@@ -98,24 +115,34 @@ const voluenteering = resumeData => {
 const projects = resumeData => {
   return resumeData.projects.map((project, index) => {
     return (
-      <ResumeMediaObject
-        title={project.name}
-        subTitle={project.name}
-        href={project.url}
-        ariaLabel={project.name}
-        startDate={project.startDate}
-        endDate={project.endDate}
-        summary={project.description}
-      >
-        Position
-        <br />
-        {ListTags(project.roles)}
-        <br />
-        <br />
-        Technologies
-        <br />
-        {ListTags(project.keywords)}
-      </ResumeMediaObject>
+      <Media>
+        <MediaLeft>
+          <Image isSize="64x64" src="https://via.placeholder.com/128x128" />
+        </MediaLeft>
+        <MediaContent>
+          <Content>
+            <a href={project.url} aria-label={project.name}>
+              {project.company}
+            </a>
+            {" / "}
+            <b>{project.industry}</b>
+            <br />
+            <small>
+              <Moment format="MMM YYYY" parse="YYYY-MM-DD" interval={0}>
+                {project.startDate}
+              </Moment>
+              {" - "}
+              <Moment format="MMM YYYY" parse="YYYY-MM-DD" interval={0}>
+                {project.endDate}
+              </Moment>
+            </small>
+            <br />
+            <ListTags tags={project.roles} isColor="light" />
+            <ListTags tags={project.keywords} isColor="primary" />
+            <p>{project.summary}</p>
+          </Content>
+        </MediaContent>
+      </Media>
     )
   })
 }
