@@ -3,13 +3,17 @@ import resumeData from "../../content/resume.json"
 import Layout from "../components/layout"
 import { Tag, Content, Media, MediaLeft, MediaContent, Image } from "bloomer"
 
-const tags = tags => {
+const ListTags = tags => {
   return tags.map((tag, index) => {
-    return <Tag>{tag}</Tag>
+    return (
+      <>
+        <Tag>{tag}</Tag>{" "}
+      </>
+    )
   })
 }
 
-const highlights = highlights => {
+const ListHighlights = highlights => {
   return (
     <ul>
       {highlights.map((highlight, index) => {
@@ -19,31 +23,55 @@ const highlights = highlights => {
   )
 }
 
+const ResumeMediaObject = ({
+  title,
+  subTitle,
+  href,
+  ariaLabel,
+  startDate,
+  endDate,
+  summary,
+  highlights,
+  children,
+}) => {
+  return (
+    <Media>
+      <MediaLeft>
+        <Image isSize="64x64" src="https://via.placeholder.com/128x128" />
+      </MediaLeft>
+      <MediaContent>
+        <Content>
+          <b>{title}</b>
+          <br />
+          <a href={href} aria-label={ariaLabel}>
+            {subTitle}
+          </a>
+          <br />
+          <small>
+            {startDate} - {endDate}
+          </small>
+          <p>{summary}</p>
+          {children}
+        </Content>
+      </MediaContent>
+    </Media>
+  )
+}
+
 const workExperiences = resumeData => {
   return resumeData.work.map((workPlace, index) => {
     return (
-      <Media>
-        <MediaLeft>
-          <Image isSize="64x64" src="https://via.placeholder.com/128x128" />
-        </MediaLeft>
-        <MediaContent>
-          <Content>
-            <b>{workPlace.position}</b>
-            <br />
-            <a href={workPlace.url} aria-label={workPlace.name}>
-              {workPlace.name}
-            </a>
-            {" - "}
-            {workPlace.location}
-            <br />
-            <small>
-              {workPlace.startDate} - {workPlace.endDate}
-            </small>
-            <p>{workPlace.description}</p>
-            {highlights(workPlace.highlights)}
-          </Content>
-        </MediaContent>
-      </Media>
+      <ResumeMediaObject
+        title={workPlace.position}
+        subTitle={workPlace.name}
+        href={workPlace.url}
+        ariaLabel={workPlace.name}
+        startDate={workPlace.startDate}
+        endDate={workPlace.endDate}
+        summary={workPlace.summary}
+      >
+        {ListHighlights(workPlace.highlights)}
+      </ResumeMediaObject>
     )
   })
 }
@@ -51,25 +79,18 @@ const workExperiences = resumeData => {
 const voluenteering = resumeData => {
   return resumeData.volunteer.map((volunteered, index) => {
     return (
-      <div>
-        <a href={volunteered.url} aria-label={volunteered.name}>
-          {volunteered.organization}
-        </a>
-        <b>{volunteered.position}</b>
-        <br />
-        <i>
-          {volunteered.startDate} - {volunteered.endDate}
-        </i>
-        <br />
-        <br />
-        <p>{volunteered.summary}</p>
-        <ul>
-          {volunteered.highlights.map((highlight, index) => {
-            return <li>{highlight}</li>
-          })}
-        </ul>
-        <br />
-      </div>
+      <ResumeMediaObject
+        title={volunteered.position}
+        subTitle={volunteered.organization}
+        href={volunteered.url}
+        ariaLabel={volunteered.name}
+        startDate={volunteered.startDate}
+        endDate={volunteered.endDate}
+        summary={volunteered.summary}
+        highlights={volunteered.highlights}
+      >
+        {ListHighlights(volunteered.highlights)}
+      </ResumeMediaObject>
     )
   })
 }
@@ -77,27 +98,24 @@ const voluenteering = resumeData => {
 const projects = resumeData => {
   return resumeData.projects.map((project, index) => {
     return (
-      <div>
-        <a href={project.url} aria-label={project.name}>
-          {project.name}
-        </a>
-        <i>
-          {project.startDate} - {project.endDate}
-        </i>
-        <p>{project.description}</p>
-        Technologies
-        <ul>
-          {project.keywords.map((keyword, index) => (
-            <li>{keyword}</li>
-          ))}
-        </ul>
+      <ResumeMediaObject
+        title={project.name}
+        subTitle={project.name}
+        href={project.url}
+        ariaLabel={project.name}
+        startDate={project.startDate}
+        endDate={project.endDate}
+        summary={project.description}
+      >
         Position
-        <ul>
-          {project.roles.map((role, index) => (
-            <li>{role}</li>
-          ))}
-        </ul>
-      </div>
+        <br />
+        {ListTags(project.roles)}
+        <br />
+        <br />
+        Technologies
+        <br />
+        {ListTags(project.keywords)}
+      </ResumeMediaObject>
     )
   })
 }
