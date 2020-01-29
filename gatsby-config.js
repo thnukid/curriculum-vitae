@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby  with Bulma, Bloomer, Netlify,  Gatsby-image",
-    description: "When do you deploy to netlify, mate?",
+    title: "ERIC BARTHOLEMY",
+    description: "Curriculum Vitae",
     author: `@thnukid`,
   },
   plugins: [
