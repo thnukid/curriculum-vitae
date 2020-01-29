@@ -1,27 +1,47 @@
 import React from "react"
 import resumeData from "../../content/resume.json"
 import Layout from "../components/layout"
-import { Content } from 'bloomer'
+import { Tag, Content, Media, MediaLeft, MediaContent, Image } from 'bloomer'
+
+const tags = (tags) => {
+   return tags.map((tag, index) => {
+    return(<Tag>{tag}</Tag>);
+  })
+}
+
+const highlights=  (highlights) => {
+  return (
+    <ul>
+      {highlights.map((highlight, index) => {
+        return(<li>{highlight}</li>);
+      })}
+    </ul>
+      );
+}
 
 const workExperiences = (resumeData) => {
   return resumeData.work.map((workPlace, index) => {
-        return(<div>
-          <a href={workPlace.url} aria-label={workPlace.name}>
-            {workPlace.name} - {workPlace.location}
-          </a>
-          <b>{workPlace.position}</b>
-          <br/>
-          <i>{workPlace.startDate} - {workPlace.endDate}</i>
-          <br/>
-          <p>{workPlace.description}</p>
-          <ul>
-            {workPlace.highlights.map((highlight, index) => {
-              return(<li>{highlight}</li>);
-            })}
-          </ul>
-          <br/>
-          </div>);
-      });
+    return(
+    <Media>
+        <MediaLeft>
+            <Image isSize='64x64' src='https://via.placeholder.com/128x128' />
+        </MediaLeft>
+        <MediaContent>
+          <Content>
+            <b>{workPlace.position}</b>
+            <br/>
+            <a href={workPlace.url} aria-label={workPlace.name}>
+              {workPlace.name}
+            </a>{' - '}{workPlace.location}
+            <br/>
+            <small>{workPlace.startDate} - {workPlace.endDate}</small>
+            <p>{workPlace.description}</p>
+            {highlights(workPlace.highlights)}
+          </Content>
+        </MediaContent>
+    </Media>
+    );
+  });
 }
 
 const voluenteering = (resumeData) => {
