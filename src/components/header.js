@@ -9,16 +9,24 @@ import {
   NavbarStart,
 } from "bloomer"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }) => {
+  const [open, setOpen] = useState(false);
+  return(
   <Navbar>
     <NavbarBrand>
       <NavbarItem>{siteTitle}</NavbarItem>
-      <NavbarBurger />
+        <NavbarBurger
+          className={(open ? 'is-active' : '')}
+          onClick={() => setOpen(prevOpen => !prevOpen)}
+        />
     </NavbarBrand>
-    <NavbarMenu>
-      <NavbarStart></NavbarStart>
+      <NavbarMenu
+        className={(open ? 'is-active' : '')}
+      >
+      <NavbarStart>
+        </NavbarStart>
       <NavbarEnd>
         <Link to="/" className="navbar-item">
           Home
@@ -28,8 +36,8 @@ const Header = ({ siteTitle }) => (
         </Link>
       </NavbarEnd>
     </NavbarMenu>
-  </Navbar>
-)
+  </Navbar>);
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
