@@ -22,7 +22,7 @@ const IndexPage = () => (
     <Hero isColor="light" isFullHeight>
       <HeroBody>
         <Container hasTextAlign="centered">
-          <Image />
+          <Image src='profile' />
           <Title tag="h1" isSize={1}>
             Eric Bartholemy
           </Title>
