@@ -32,6 +32,5 @@ module.exports = {
     "gatsby-plugin-netlify-cache",
     "gatsby-plugin-netlify",
     "gatsby-plugin-catch-links",
-  ],
-  pathPrefix: "/curriculum-vitae",
+  ]
 }
