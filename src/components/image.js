@@ -16,42 +16,44 @@ import Img from "gatsby-image"
 const Image = ({ src, isSize }) => (
   <StaticQuery
     query={graphql`
-    {
-      allFile(filter: {sourceInstanceName: {eq: "images"}}) {
-        edges {
-          node {
-            relativePath
-            publicURL
-            extension
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                ...GatsbyImageSharpFluid
-                originalName
+      {
+        allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+          edges {
+            node {
+              relativePath
+              publicURL
+              extension
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                  originalName
+                }
               }
             }
           }
         }
       }
-    }
     `}
     render={data => {
-      const image = data.allFile.edges.find((edge) => {
+      const image = data.allFile.edges.find(edge => {
         return edge.node.relativePath.replace(/\.[^/.]+$/, "") === src
-      });
+      })
       if (!image) {
         return null
       }
 
-      if(image.node.extension == 'svg') {
+      if (image.node.extension == "svg") {
         return (
-          <figure className={"image " + (isSize ? `is-${isSize}` : '' )}>
+          <figure className={"image " + (isSize ? `is-${isSize}` : "")}>
             <img src={image.node.publicURL} />
-          </figure>);
+          </figure>
+        )
       }
       return (
-        <figure className={"image " + (isSize ? `is-${isSize}` : '' )}>
+        <figure className={"image " + (isSize ? `is-${isSize}` : "")}>
           <Img fluid={image.node.childImageSharp.fluid} />
-        </figure>);
+        </figure>
+      )
     }}
   />
 )

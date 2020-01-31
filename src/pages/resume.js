@@ -44,9 +44,9 @@ const ListHighlights = ({ highlights }) => {
   )
 }
 
-const companyImagePath = (companyName) => {
-  const imageNameSrc = companyName.toLocaleLowerCase().replace(' ','_');
-  return ['companies', imageNameSrc].join('/');
+const companyImagePath = companyName => {
+  const imageNameSrc = companyName.toLocaleLowerCase().replace(" ", "_")
+  return ["companies", imageNameSrc].join("/")
 }
 
 const ResumeMediaObject = ({
@@ -63,7 +63,7 @@ const ResumeMediaObject = ({
   return (
     <Media>
       <MediaLeft>
-        <Img src={companyImagePath(subTitle)} isSize='64x64'/>
+        <Img src={companyImagePath(subTitle)} isSize="64x64" />
       </MediaLeft>
       <MediaContent>
         <Content>
@@ -148,7 +148,7 @@ const projects = resumeData => {
       return (
         <Media>
           <MediaLeft>
-            <Img src={companyImagePath(project.entity)} isSize='64x64'/>
+            <Img src={companyImagePath(project.entity)} isSize="64x64" />
           </MediaLeft>
           <MediaContent>
             <Content>
@@ -262,7 +262,7 @@ const HeroTitel = ({ title, subTitle, children }) => {
     <Hero isColor="light">
       <HeroBody>
         <Container hasTextAlign="centered">
-          <Img src='profile' />
+          <Img src="profile" />
           <Title tag="h1" isSize={1}>
             {title}
           </Title>
@@ -285,15 +285,19 @@ const HeroTitel = ({ title, subTitle, children }) => {
               <Tab>
                 <TabLink href="#projects">Projects</TabLink>
               </Tab>
-                { false ? (<div><Tab>
-                <TabLink href="#education">Education</TabLink>
-              </Tab>
-              <Tab>
-                <TabLink href="#certificates">Certificates</TabLink>
-              </Tab>
-              <Tab>
-                <TabLink href="#skills">Skills</TabLink>
-                  </Tab></div>) : null }
+              {false ? (
+                <div>
+                  <Tab>
+                    <TabLink href="#education">Education</TabLink>
+                  </Tab>
+                  <Tab>
+                    <TabLink href="#certificates">Certificates</TabLink>
+                  </Tab>
+                  <Tab>
+                    <TabLink href="#skills">Skills</TabLink>
+                  </Tab>
+                </div>
+              ) : null}
             </TabList>
           </Container>
         </Tabs>
@@ -335,34 +339,37 @@ const resume = () => (
       <br />
       <Content>{voluenteering(resumeData)}</Content>
 
-        { false ? (<div><a name="education" />
-      <Hero isColor="info">
-        <HeroBody>
-          <Title>Education</Title>
-        </HeroBody>
-      </Hero>
-      <br />
-      <Content>{educations(resumeData)}</Content>
+      {false ? (
+        <div>
+          <a name="education" />
+          <Hero isColor="info">
+            <HeroBody>
+              <Title>Education</Title>
+            </HeroBody>
+          </Hero>
+          <br />
+          <Content>{educations(resumeData)}</Content>
 
-      <a name="certificates" />
-      <Hero isColor="info">
-        <HeroBody>
-          <Title>Certificates</Title>
-        </HeroBody>
-      </Hero>
-      <br />
-      <Content>{certificates(resumeData)}</Content>
+          <a name="certificates" />
+          <Hero isColor="info">
+            <HeroBody>
+              <Title>Certificates</Title>
+            </HeroBody>
+          </Hero>
+          <br />
+          <Content>{certificates(resumeData)}</Content>
 
-      <a name="skills" />
-      <Hero isColor="info">
-        <HeroBody>
-          <Title>Skills</Title>
-        </HeroBody>
-      </Hero>
-      <br />
-      <Content>{skills(resumeData)}</Content>
-        </div>) : null}
-      </Container>
+          <a name="skills" />
+          <Hero isColor="info">
+            <HeroBody>
+              <Title>Skills</Title>
+            </HeroBody>
+          </Hero>
+          <br />
+          <Content>{skills(resumeData)}</Content>
+        </div>
+      ) : null}
+    </Container>
   </Layout>
 )
 export default resume
