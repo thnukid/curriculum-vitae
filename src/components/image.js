@@ -13,20 +13,46 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const Image = () => (
+const Image = ({ src, isSize }) => (
   <StaticQuery
     query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "profile.jpeg" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+    {
+      allFile(filter: {sourceInstanceName: {eq: "images"}}) {
+        edges {
+          node {
+            relativePath
+            publicURL
+            extension
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid
+                originalName
+              }
             }
           }
         }
       }
+    }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => {
+      const image = data.allFile.edges.find((edge) => {
+        return edge.node.relativePath.replace(/\.[^/.]+$/, "") === src
+      });
+      if (!image) {
+        return null
+      }
+
+      if(image.node.extension == 'svg') {
+        return (
+          <figure className={"image " + (isSize ? `is-${isSize}` : '' )}>
+            <img src={image.node.publicURL} />
+          </figure>);
+      }
+      return (
+        <figure className={"image " + (isSize ? `is-${isSize}` : '' )}>
+          <Img fluid={image.node.childImageSharp.fluid} />
+        </figure>);
+    }}
   />
 )
 export default Image
