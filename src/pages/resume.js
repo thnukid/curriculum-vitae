@@ -262,7 +262,7 @@ const HeroTitel = ({ title, subTitle, children }) => {
     <Hero isColor="light">
       <HeroBody>
         <Container hasTextAlign="centered">
-          <Img src='profile.jpeg' />
+          <Img src='profile' />
           <Title tag="h1" isSize={1}>
             {title}
           </Title>
@@ -285,7 +285,7 @@ const HeroTitel = ({ title, subTitle, children }) => {
               <Tab>
                 <TabLink href="#projects">Projects</TabLink>
               </Tab>
-              <Tab>
+                { false ? (<div><Tab>
                 <TabLink href="#education">Education</TabLink>
               </Tab>
               <Tab>
@@ -293,7 +293,7 @@ const HeroTitel = ({ title, subTitle, children }) => {
               </Tab>
               <Tab>
                 <TabLink href="#skills">Skills</TabLink>
-              </Tab>
+                  </Tab></div>) : null }
             </TabList>
           </Container>
         </Tabs>
@@ -335,7 +335,7 @@ const resume = () => (
       <br />
       <Content>{voluenteering(resumeData)}</Content>
 
-      <a name="education" />
+        { false ? (<div><a name="education" />
       <Hero isColor="info">
         <HeroBody>
           <Title>Education</Title>
@@ -361,7 +361,8 @@ const resume = () => (
       </Hero>
       <br />
       <Content>{skills(resumeData)}</Content>
-    </Container>
+        </div>) : null}
+      </Container>
   </Layout>
 )
 export default resume
