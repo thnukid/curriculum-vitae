@@ -310,6 +310,15 @@ const HeroTitel = ({ title, subTitle, children }) => {
 const resume = () => (
   <>
     <Container isFluid isMarginless>
+      <a name="projects" />
+        <HeroBody>
+          <Title>Consulting Projects</Title>
+        </HeroBody>
+      </Hero>
+      <br />
+      <Hero isColor="primary" isBold>
+      <Content>{projects(resumeData)}</Content>
+
       <a name="experience" />
       <Hero isColor="info" isBold>
         <HeroBody>
@@ -322,15 +331,6 @@ const resume = () => (
           {workExperiences(resumeData)}
         </div>
       </Content>
-
-      <a name="projects" />
-      <Hero isColor="primary" isBold>
-        <HeroBody>
-          <Title>Consulting Projects</Title>
-        </HeroBody>
-      </Hero>
-      <br />
-      <Content>{projects(resumeData)}</Content>
 
       {false ? (
         <div>
