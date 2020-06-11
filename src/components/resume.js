@@ -332,7 +332,6 @@ const resume = () => (
         </div>
       </Content>
 
-
       {false ? (
         <div>
           <a name="volunteer" />

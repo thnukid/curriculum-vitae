@@ -20,7 +20,7 @@ import {
   FaCode,
   FaJs,
   FaCss3,
-  FaPython
+  FaPython,
 } from "react-icons/fa"
 
 const IndexPage = () => (
