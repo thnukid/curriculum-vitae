@@ -34,5 +34,5 @@ module.exports = {
     "gatsby-plugin-catch-links",
   ],
   pathPrefix: "/curriculum-vitae",
-  assetPrefix: "/curriculum-vitae",
+  assetPrefix: "/",
 }
