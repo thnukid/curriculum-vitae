@@ -28,13 +28,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Container isFluid>
-          <Header siteTitle={data.site.siteMetadata.title} />
-        </Container>
-        <Container isFluid>{children}</Container>
-        <Container isFluid>
-          <Footer siteTitle={data.site.siteMetadata.title} />
-        </Container>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div className="container is-fluid is-marginless is-paddingless">
+          {children}
+        </div>
       </>
     )}
   />

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "ERIC BARTHOLEMY",
-    description: "Curriculum Vitae",
+    description: "Software Developer with 5 years experience",
     author: `@thnukid`,
   },
   plugins: [
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "gatsby-starter-default",
-        short_name: "starter",
+        name: "Ebax.dev",
+        short_name: "Ebax",
         start_url: "/",
         background_color: "#663399",
         theme_color: "#663399",
         display: "standalone",
-        icon: "src/images/gatsby-icon.png", // This path is relative to the root of the site.
+        icon: "src/images/profile.jpeg", // This path is relative to the root of the site.
       },
     },
     "gatsby-plugin-sass",

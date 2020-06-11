@@ -44,7 +44,7 @@ const Image = ({ src, isSize }) => (
 
       if (image.node.extension == "svg") {
         return (
-          <figure className={"image " + (isSize ? `is-${isSize}` : "")}>
+          <figure className={"image is-4by3 " + (isSize ? `is-${isSize}` : "is-64x64")}>
             <img src={image.node.publicURL} />
           </figure>
         )

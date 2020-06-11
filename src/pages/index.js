@@ -4,6 +4,7 @@ import React from "react"
 
 import Image from "../components/image"
 import Layout from "../components/layout"
+import Resume from "../components/resume"
 import SEO from "../components/seo"
 import {
   FaGitlab,
@@ -14,72 +15,59 @@ import {
   FaEnvelope,
   FaMapMarkedAlt,
   FaMixcloud,
+  FaGem,
+  FaHtml5,
+  FaCode,
+  FaJs,
+  FaCss3,
+  FaPython
 } from "react-icons/fa"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <Hero isColor="light" isFullHeight>
+    <SEO title="Software Engineer" />
+    <section class="hero is-dark is-fullheight is-bold is-medium cube__container">
+      <div className="cube">
+        <FaGithub />
+      </div>
+      <div className="cube">
+        <FaGem />
+      </div>
+      <div className="cube">
+        <FaJs />
+      </div>
+      <div className="cube">
+        <FaPython />
+      </div>
+      <div className="cube">
+        <FaGitlab />
+      </div>
+      <div className="cube">
+        <FaHtml5 />
+      </div>
       <HeroBody>
-        <Container hasTextAlign="centered">
+        <Container isFluid hasTextAlign="centered">
           <Image src="profile" />
+          <br />
           <Title tag="h1" isSize={1}>
             Eric Bartholemy
           </Title>
-          <Title tag="h4" isSize={4}>
-            Software Engineer, Hacker, and Lebenskuenstler
+          <Title tag="h3" isSize={3}>
+            Software Engineer B.Sc.
           </Title>
-          <ul>
-            <li>
-              <a href="#" aria-label="Gitlab">
-                <FaGitlab />
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Gitlab">
-                <FaGithub />
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Gitlab">
-                <FaTwitter />
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Gitlab">
-                <FaLinkedin />
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Gitlab">
-                <FaKeybase />
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Gitlab">
-                <FaEnvelope />
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Gitlab">
-                <FaMapMarkedAlt />
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Gitlab">
-                <FaMixcloud />
-              </a>
-            </li>
-          </ul>
+          <Title tag="h6" isSize={6}>
+            WWW, Ruby on Rails, Javascript, HTML5, CSS
+          </Title>
         </Container>
       </HeroBody>
-      <HeroFooter>
-        <Container hasTextAlign="centered">
-          But sooner or later the man who wins, Is the one who thinks he can.
-          <br />~ Walter D. Wintle
-        </Container>
-      </HeroFooter>
-    </Hero>
+      <div id="scroll-down-animation">
+        <span class="mouse">
+          <span class="move" />
+        </span>
+        <small>Scroll down</small>
+      </div>
+    </section>
+    <Resume />
   </Layout>
 )
 

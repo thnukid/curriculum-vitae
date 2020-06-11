@@ -105,17 +105,19 @@ const workExperiences = resumeData => {
     .sort((a, b) => new Date(b.startDate) - new Date(a.startDate))
     .map((workPlace, index) => {
       return (
-        <ResumeMediaObject
-          title={workPlace.position}
-          subTitle={workPlace.name}
-          href={workPlace.url}
-          ariaLabel={workPlace.name}
-          startDate={workPlace.startDate}
-          endDate={workPlace.endDate}
-          summary={workPlace.summary}
-        >
-          <ListHighlights highlights={workPlace.highlights} />
-        </ResumeMediaObject>
+        <div class="column">
+          <ResumeMediaObject
+            title={workPlace.position}
+            subTitle={workPlace.name}
+            href={workPlace.url}
+            ariaLabel={workPlace.name}
+            startDate={workPlace.startDate}
+            endDate={workPlace.endDate}
+            summary={workPlace.summary}
+          >
+            <ListHighlights highlights={workPlace.highlights} />
+          </ResumeMediaObject>
+        </div>
       )
     })
 }
@@ -306,43 +308,42 @@ const HeroTitel = ({ title, subTitle, children }) => {
   )
 }
 const resume = () => (
-  <Layout>
-    <SEO title="Resume" />
-    {basics(resumeData)}
-    <br />
-    <br />
+  <>
     <Container isFluid isMarginless>
       <a name="experience" />
-      <Hero isColor="info">
+      <Hero isColor="info" isBold>
         <HeroBody>
-          <Title>Work Experience</Title>
+          <Title>Workplaces</Title>
         </HeroBody>
       </Hero>
       <br />
-      <Content>{workExperiences(resumeData)}</Content>
+      <Content>
+        <div class="columns  is-vcentered is-desktop">
+          {workExperiences(resumeData)}
+        </div>
+      </Content>
 
       <a name="projects" />
-      <Hero isColor="info">
+      <Hero isColor="primary" isBold>
         <HeroBody>
-          <Title>Projects</Title>
+          <Title>Consulting Projects</Title>
         </HeroBody>
       </Hero>
       <br />
       <Content>{projects(resumeData)}</Content>
 
-      <a name="volunteer" />
-      <Hero isColor="info">
-        <HeroBody>
-          <Title>Volunteer</Title>
-        </HeroBody>
-      </Hero>
-      <br />
-      <Content>{voluenteering(resumeData)}</Content>
-
       {false ? (
         <div>
-          <a name="education" />
+          <a name="volunteer" />
           <Hero isColor="info">
+            <HeroBody>
+              <Title>Volunteer</Title>
+            </HeroBody>
+          </Hero>
+          <br />
+          <Content>{voluenteering(resumeData)}</Content>
+          <Hero isColor="info">
+            <a name="education" />
             <HeroBody>
               <Title>Education</Title>
             </HeroBody>
@@ -350,8 +351,8 @@ const resume = () => (
           <br />
           <Content>{educations(resumeData)}</Content>
 
-          <a name="certificates" />
           <Hero isColor="info">
+            <a name="certificates" />
             <HeroBody>
               <Title>Certificates</Title>
             </HeroBody>
@@ -359,8 +360,8 @@ const resume = () => (
           <br />
           <Content>{certificates(resumeData)}</Content>
 
-          <a name="skills" />
           <Hero isColor="info">
+            <a name="skills" />
             <HeroBody>
               <Title>Skills</Title>
             </HeroBody>
@@ -370,6 +371,6 @@ const resume = () => (
         </div>
       ) : null}
     </Container>
-  </Layout>
+  </>
 )
 export default resume
