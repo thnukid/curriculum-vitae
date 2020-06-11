@@ -311,12 +311,12 @@ const resume = () => (
   <>
     <Container isFluid isMarginless>
       <a name="projects" />
+      <Hero isColor="primary" isBold>
         <HeroBody>
           <Title>Consulting Projects</Title>
         </HeroBody>
       </Hero>
       <br />
-      <Hero isColor="primary" isBold>
       <Content>{projects(resumeData)}</Content>
 
       <a name="experience" />
@@ -331,6 +331,7 @@ const resume = () => (
           {workExperiences(resumeData)}
         </div>
       </Content>
+
 
       {false ? (
         <div>
