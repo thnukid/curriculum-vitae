@@ -1,0 +1,80 @@
+## Created with gatsby-plugin-netlify
+
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: same-origin
+/component---node-modules-gatsby-plugin-offline-app-shell-js-e385def15e29b6ed02a7.js
+  Cache-Control: public, max-age=31536000, immutable
+/styles.ac780bec98ebdc3a8e8f.css
+  Cache-Control: public, max-age=31536000, immutable
+/styles-503b3015a8b38c118cb7.js
+  Cache-Control: public, max-age=31536000, immutable
+/1bfc9850-fe5fea753874d754615f.js
+  Cache-Control: public, max-age=31536000, immutable
+/bfc3b393f484e8017a4ce6b216c744361b202e15-7f9310b6e21af2ec5af0.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-404-js-94f488a501a623b60cc5.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-index-js-e59a8b0f10327867b0fd.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-page-2-js-ad76b46590af25f2ca5f.js
+  Cache-Control: public, max-age=31536000, immutable
+/webpack-runtime-8f0ccb4c85c08fbf9e9b.js
+  Cache-Control: public, max-age=31536000, immutable
+/framework-75da9754c2a76bbaf08a.js
+  Cache-Control: public, max-age=31536000, immutable
+/app-023f41f29300a33b186f.js
+  Cache-Control: public, max-age=31536000, immutable
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/sw.js
+  Cache-Control: no-cache
+/curriculum-vitae/offline-plugin-app-shell-fallback/
+  Link: </curriculum-vitae/webpack-runtime-8f0ccb4c85c08fbf9e9b.js>; rel=preload; as=script
+  Link: </curriculum-vitae/framework-75da9754c2a76bbaf08a.js>; rel=preload; as=script
+  Link: </curriculum-vitae/app-023f41f29300a33b186f.js>; rel=preload; as=script
+  Link: </curriculum-vitae/component---node-modules-gatsby-plugin-offline-app-shell-js-e385def15e29b6ed02a7.js>; rel=preload; as=script
+  Link: </curriculum-vitae/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </curriculum-vitae/page-data/offline-plugin-app-shell-fallback/page-data.json>; rel=preload; as=fetch; crossorigin
+/curriculum-vitae/404/
+  Link: </curriculum-vitae/webpack-runtime-8f0ccb4c85c08fbf9e9b.js>; rel=preload; as=script
+  Link: </curriculum-vitae/framework-75da9754c2a76bbaf08a.js>; rel=preload; as=script
+  Link: </curriculum-vitae/app-023f41f29300a33b186f.js>; rel=preload; as=script
+  Link: </curriculum-vitae/styles-503b3015a8b38c118cb7.js>; rel=preload; as=script
+  Link: </curriculum-vitae/1bfc9850-fe5fea753874d754615f.js>; rel=preload; as=script
+  Link: </curriculum-vitae/bfc3b393f484e8017a4ce6b216c744361b202e15-7f9310b6e21af2ec5af0.js>; rel=preload; as=script
+  Link: </curriculum-vitae/component---src-pages-404-js-94f488a501a623b60cc5.js>; rel=preload; as=script
+  Link: </curriculum-vitae/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </curriculum-vitae/page-data/404/page-data.json>; rel=preload; as=fetch; crossorigin
+/curriculum-vitae/
+  Link: </curriculum-vitae/webpack-runtime-8f0ccb4c85c08fbf9e9b.js>; rel=preload; as=script
+  Link: </curriculum-vitae/framework-75da9754c2a76bbaf08a.js>; rel=preload; as=script
+  Link: </curriculum-vitae/app-023f41f29300a33b186f.js>; rel=preload; as=script
+  Link: </curriculum-vitae/styles-503b3015a8b38c118cb7.js>; rel=preload; as=script
+  Link: </curriculum-vitae/1bfc9850-fe5fea753874d754615f.js>; rel=preload; as=script
+  Link: </curriculum-vitae/bfc3b393f484e8017a4ce6b216c744361b202e15-7f9310b6e21af2ec5af0.js>; rel=preload; as=script
+  Link: </curriculum-vitae/component---src-pages-index-js-e59a8b0f10327867b0fd.js>; rel=preload; as=script
+  Link: </curriculum-vitae/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </curriculum-vitae/page-data/index/page-data.json>; rel=preload; as=fetch; crossorigin
+/curriculum-vitae/page-2/
+  Link: </curriculum-vitae/webpack-runtime-8f0ccb4c85c08fbf9e9b.js>; rel=preload; as=script
+  Link: </curriculum-vitae/framework-75da9754c2a76bbaf08a.js>; rel=preload; as=script
+  Link: </curriculum-vitae/app-023f41f29300a33b186f.js>; rel=preload; as=script
+  Link: </curriculum-vitae/styles-503b3015a8b38c118cb7.js>; rel=preload; as=script
+  Link: </curriculum-vitae/1bfc9850-fe5fea753874d754615f.js>; rel=preload; as=script
+  Link: </curriculum-vitae/bfc3b393f484e8017a4ce6b216c744361b202e15-7f9310b6e21af2ec5af0.js>; rel=preload; as=script
+  Link: </curriculum-vitae/component---src-pages-page-2-js-ad76b46590af25f2ca5f.js>; rel=preload; as=script
+  Link: </curriculum-vitae/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </curriculum-vitae/page-data/page-2/page-data.json>; rel=preload; as=fetch; crossorigin
+/curriculum-vitae/404.html
+  Link: </curriculum-vitae/webpack-runtime-8f0ccb4c85c08fbf9e9b.js>; rel=preload; as=script
+  Link: </curriculum-vitae/framework-75da9754c2a76bbaf08a.js>; rel=preload; as=script
+  Link: </curriculum-vitae/app-023f41f29300a33b186f.js>; rel=preload; as=script
+  Link: </curriculum-vitae/styles-503b3015a8b38c118cb7.js>; rel=preload; as=script
+  Link: </curriculum-vitae/1bfc9850-fe5fea753874d754615f.js>; rel=preload; as=script
+  Link: </curriculum-vitae/bfc3b393f484e8017a4ce6b216c744361b202e15-7f9310b6e21af2ec5af0.js>; rel=preload; as=script
+  Link: </curriculum-vitae/component---src-pages-404-js-94f488a501a623b60cc5.js>; rel=preload; as=script
+  Link: </curriculum-vitae/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </curriculum-vitae/page-data/404.html/page-data.json>; rel=preload; as=fetch; crossorigin
