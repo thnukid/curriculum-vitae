@@ -19,7 +19,7 @@
     "gatsby-source-filesystem": "^2.0.38",
     "gatsby-transformer-sharp": "^2.1.21",
     "gh-pages": "^2.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "node-sass": "^7.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.5.1",
